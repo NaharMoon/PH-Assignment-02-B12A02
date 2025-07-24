@@ -23,12 +23,339 @@
     padding: 0;
     box-sizing: border-box;
 }
-p {
+p,
+a,
+li,
+button,
+input {
     font-family: "Inter", sans-serif;
 }
-.container{
-    max-width: 1140px;
+.container {
+    max-width: 1180px;
     margin: auto;
+    padding: 0px 20px;
+}
+img {
+    width: 100%;
+}
+.btn-style {
+    background-color: rgb(233, 90, 8);
+    color: white;
+    font-weight: 600;
+    border: none;
+    line-height: 19px;
+}
+.text-color-gray {
+    color: rgb(137, 135, 161)
+}
+.text-color-orrange {
+    color: rgb(233, 90, 8);
+}
+.text-color-black-shade {
+    color: rgba(0, 0, 0, 0.5);
 }
 
 /* common styles ends */
+
+/* main style starts */
+
+/* navbar styling starts */
+
+.nav-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+nav ul {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul li a {
+    text-decoration: none;
+    color: rgb(37, 36, 50);
+    font-size: 14px;
+    font-weight: 700;
+}
+nav ul li:nth-child(2) a,
+nav ul li:nth-child(3) a {
+    font-weight: 400;
+    color: rgb(137, 135, 161);
+}
+
+@media screen and (max-width: 576px) {
+
+    nav ul li:nth-child(1),
+    nav ul li:nth-child(2),
+    nav ul li:nth-child(3) {
+        display: none;
+    }
+    nav ul li:nth-child(4) a {
+        font-weight: 400;
+    }
+    .container {
+        padding: 0px 16px;
+    }
+    .logo {
+        width: 63px;
+        height: 38px;
+    }
+}
+
+/* navbar styling ends */
+
+/* banner styling starts */
+
+.banner-container {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 120px;
+}
+.banner-info {
+    width: 50%;
+}
+.banner-info h1 {
+    font-size: 65px;
+    font-weight: 700;
+    margin-bottom: 13px;
+    /* line-height: 89px; */
+}
+.banner-info p {
+    font-size: 22px;
+    font-weight: 400;
+    /* line-height: 27px; */
+}
+.banner-image {
+    width: 50%;
+}
+
+@media screen and (max-width: 576px) {
+    .banner-section .container{
+        padding: 0px;
+    }
+    .banner-container {
+        flex-direction: column-reverse;
+        margin-top: 28px;
+    }
+    .banner-info {
+        width: 100%;
+        padding-left: 16px;
+    }
+    .banner-image {
+        width: 100%;
+    }
+    .banner-info h1 {
+        font-size: 28px;
+        margin: 28px 0 13px 0px;
+    }
+    .banner-info p {
+        font-size: 14px;
+    }
+
+}
+
+/* banner styling ends */
+
+/* plants section styling starts */
+
+.plants-section {
+    margin-top: 120px;
+}
+.plants-section-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.plants-section-info h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+.plants-section-info p {
+    font-size: 22px;
+    font-weight: 400;
+    max-width: 888px;
+    text-align: center;
+    margin-top: 16px;
+}
+.plants-section-card-container {
+    margin-top: 49px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 30px;
+    column-gap: 20px;
+}
+.plants-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 270px;
+    max-height: 484px;
+}
+.plants-card h1 {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 22px;
+    color: rgb(17, 17, 17);
+    font-family: "Inter", sans-serif;
+}
+.plants-card span {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 22px;
+    color: rgb(17, 17, 17);
+    font-family: "Inter", sans-serif;
+}
+.plants-card button {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        padding: 0px 16px;
+    }
+    .plants-section {
+        margin-top: 65px;
+    }
+    .plants-section-card-container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 28px;
+    }
+    .plants-section-info h1 {
+        font-size: 28px;
+    }
+    .plants-section-info p {
+        font-size: 14px;
+        padding: 0px 20px;
+    }
+    .plants-card h1 {
+        font-size: 16px;
+    }
+    .plants-card span {
+        font-size: 16px;
+    }
+}
+
+/* plants section styling ends */
+
+/* plants lover section styling starts */
+
+.plants-lover-section-container {
+    margin-top: 211px;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+.plants-lover-section-image {
+    width: 50%;
+}
+.plants-lover-section-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.plants-lover-section-info h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+.plants-lover-section-info ul li {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 22px;
+    font-weight: 400;
+    text-indent: -1.5em;
+    padding-left: 1.5em;
+    margin: 20px 0px;
+}
+.plants-lover-section-info ul {
+    list-style-position: inside;
+    padding-left: 0.5em;
+}
+
+@media screen and (max-width: 576px) {
+    .plants-lover-section-container {
+        flex-direction: column;
+        gap: 18px;
+        margin-top: 60px;
+    }
+    .plants-lover-section-image {
+        width: 100%;
+    }
+    .plants-lover-section-info {
+        width: 100%;
+    }
+    .plants-lover-section-info h1 {
+        font-size: 28px;
+    }
+    .plants-lover-section-info ul li {
+        font-size: 14px;
+        margin: 16px 0px;
+    }
+
+}
+
+/* plants lover section styling ends */
+
+/* join section styling starts */
+
+.join-section .container {
+    margin-top: 120px;
+    max-width: 100%;
+    height: 50vh;
+    background-image: url(./assets/news-letter-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.join-section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.join-section h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+}
+.join-section-content .subscribe {
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    height: 50px;
+    margin-top: 23px;
+}
+.join-section-content .subscribe input {
+    border: none;
+    width: 90%;
+    padding-left: 20px;
+}
+.join-section-content .subscribe button {
+    width: 186px;
+}
+
+@media screen and (max-width: 576px) {
+    .join-section h1 {
+        font-size: 20px;
+    }
+    .join-section-content .subscribe {
+        width: 85%;
+    }
+
+    .join-section .container {
+        margin-top: 44px;
+    }
+}
+
+/* join section styling ends */
+
+/* main style ends */
