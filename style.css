@@ -69,7 +69,7 @@ img {
 }
 nav ul {
     display: flex;
-    gap: 48px;
+    gap: clamp(16px,3vw,48px);
     align-items: center;
 }
 nav ul li {
@@ -78,13 +78,16 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: rgb(37, 36, 50);
-    font-size: 14px;
+    font-size: clamp(14px,1.5vw,16px);
     font-weight: 700;
 }
 nav ul li:nth-child(2) a,
 nav ul li:nth-child(3) a {
     font-weight: 400;
     color: rgb(137, 135, 161);
+}
+nav ul li:nth-child(4) a{
+    font-weight: 400;
 }
 
 @media screen and (max-width: 576px) {
@@ -101,8 +104,7 @@ nav ul li:nth-child(3) a {
         padding: 0px 16px;
     }
     .logo {
-        width: 63px;
-        height: 38px;
+        width: 70px;
     }
 }
 
@@ -119,13 +121,13 @@ nav ul li:nth-child(3) a {
     width: 50%;
 }
 .banner-info h1 {
-    font-size: 65px;
+    font-size: clamp(28px,5vw,65px);
     font-weight: 700;
     margin-bottom: 13px;
     /* line-height: 89px; */
 }
 .banner-info p {
-    font-size: 22px;
+    font-size: clamp(14px,2vw,22px);
     font-weight: 400;
     /* line-height: 27px; */
 }
@@ -140,7 +142,7 @@ nav ul li:nth-child(3) a {
     }
     .banner-container {
         flex-direction: column-reverse;
-        margin-top: 28px;
+        margin-top: 40px;
     }
     .banner-info {
         width: 100%;
@@ -164,7 +166,7 @@ nav ul li:nth-child(3) a {
 /* plants section styling starts */
 
 .plants-section {
-    margin-top: 120px;
+    margin-top: clamp(65px,8vw,120px);
 }
 .plants-section-info {
     display: flex;
@@ -172,11 +174,11 @@ nav ul li:nth-child(3) a {
     align-items: center;
 }
 .plants-section-info h1 {
-    font-size: 50px;
+    font-size: clamp(28px,3.5vw,50px);
     font-weight: 700;
 }
 .plants-section-info p {
-    font-size: 22px;
+    font-size: clamp(14px,1.5vw,22px);
     font-weight: 400;
     max-width: 888px;
     text-align: center;
@@ -199,22 +201,23 @@ nav ul li:nth-child(3) a {
 .plants-card h1 {
     margin-top: 20px;
     font-weight: 500;
-    font-size: 22px;
+    font-size: clamp(16px,1.5vw,22px);
     color: rgb(17, 17, 17);
     font-family: "Inter", sans-serif;
 }
 .plants-card span {
     margin-top: 10px;
     font-weight: 700;
-    font-size: 22px;
+    font-size: clamp(16px,1.5vw,22px);
     color: rgb(17, 17, 17);
     font-family: "Inter", sans-serif;
 }
 .plants-card button {
     display: block;
     width: 100%;
-    height: 50px;
+    height: clamp(30px,3vw,50px);
     margin-top: 20px;
+    font-size: clamp(14px,1.5vw,16px);
 }
 
 @media screen and (max-width: 576px) {
@@ -280,12 +283,12 @@ nav ul li:nth-child(3) a {
     align-items: flex-start;
 }
 .plants-lover-section-info h1 {
-    font-size: 50px;
+    font-size: clamp(28px,3.5vw,50px);
     font-weight: 700;
 }
 .plants-lover-section-info ul li {
     color: rgba(0, 0, 0, 0.5);
-    font-size: 22px;
+    font-size: clamp(14px,1.5vw,22px);
     font-weight: 400;
     text-indent: -1.5em;
     padding-left: 1.5em;
